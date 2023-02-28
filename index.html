@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometry genius</title>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d69d486a2e.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- navbar part starts -->
+  <nav>
+    <div class="navbar bg-sky-100 grid grid-cols-2 justify-around px-5">
+      <a class="btn btn-ghost normal-case w-[180px]">
+        <h1 class="text-xl font-bold">Interactive</h1>
+        <p class="text-[14px]">Geometry Genius</p>
+      </a>
+      <button id="blog" class="btn btn-info w-[120px] flex justify-self-end text-white font-bold">
+        Blog
+      </button>
+    </div>
+  </nav>
+  <!-- navbar part ends -->
+
+  <!-- card items part starts -->
+  <main class="flex flex-wrap">
+    <div class="cardItems lg:w-[68%] w-full flex flex-wrap gap-4 my-6 justify-center">
+      <!-- triangle card -->
+      <div class="cards w-72 bg-base-100 shadow-xl border border-1 border-solid border-slate-100">
+        <figure class="px-8 pt-10">
+          <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center font-medium">
+          <h2 id="triangleTitle" class="card-title font-bold">Triangle</h2>
+          <p>
+            Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> <span id="triangleFirstValue">b</span>
+            <i class="fa-solid fa-xmark"></i> <span id="triangleSecondValue">h</span>
+          </p>
+          <div class="grid grid-cols-4 items-center justify-evenly">
+            <input id="triangleFirstInput" style="width: 65px" type="text" placeholder="b"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+            <input id="triangleSecondInput" style="width: 65px" type="text" placeholder="h"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+          </div>
+          <div class="card-actions mt-6" style="width: 250px">
+            <button id="triangleButton"
+              class="btn btn-info w-full hover:bg-slate-300 hover:border-none text-white font-bold hover:text-black">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Rectangle card -->
+      <div class="cards w-72 bg-base-100 shadow-xl border border-1 border-solid border-slate-100">
+        <figure class="px-8 pt-10">
+          <img src="./images/rectangle.png" alt="Shoes" class="rounded-xl h-[177px]" />
+        </figure>
+        <div class="card-body items-center text-center font-medium">
+          <h2 id="rectangleTitle" class="card-title font-bold">Rectangle</h2>
+          <p>
+            Area (A) = <span id="rectangleFirstValue">w</span>
+            <i class="fa-solid fa-xmark"></i> <span id="rectangleSecondValue">l</span>
+          </p>
+          <div class="grid grid-cols-4 items-center justify-evenly">
+            <input id="rectangleFirstInput" style="width: 65px" type="text" placeholder="w"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+            <input id="rectangleSecondInput" style="width: 65px" type="text" placeholder="l"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+          </div>
+          <div class="card-actions mt-6" style="width: 250px">
+            <button id="rectangleButton"
+              class="btn btn-info w-full hover:bg-slate-300 hover:border-none text-white font-bold hover:text-black">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Parallelogram card -->
+      <div class="cards w-72 bg-base-100 shadow-xl border border-1 border-solid border-slate-100">
+        <figure class="px-8 pt-10">
+          <img src="./images/parallelogram.png" alt="Shoes" class="rounded-xl h-[177px]" />
+        </figure>
+        <div class="card-body items-center text-center font-medium">
+          <h2 id="parallelogramTitle" class="card-title font-bold">Parallelogram</h2>
+          <p>
+            Area (A) = <span id="parallelogramFirstValue">b</span>
+            <i class="fa-solid fa-xmark"></i> <span id="parallelogramSecondValue">h</span>
+          </p>
+          <div class="grid grid-cols-4 items-center justify-evenly">
+            <input id="parallelogramFirstInput" style="width: 65px" type="text" placeholder="b"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+            <input id="parallelogramSecondInput" style="width: 65px" type="text" placeholder="h"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+          </div>
+          <div class="card-actions mt-6" style="width: 250px">
+            <button id="parallelogramButton"
+              class="btn btn-info w-full hover:bg-slate-300 hover:border-none text-white font-bold hover:text-black">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Rhombus card -->
+      <div class="cards w-72 bg-base-100 shadow-xl border border-1 border-solid border-slate-100">
+        <figure class="px-8 pt-10">
+          <img src="./images/rhombus.png" alt="Shoes" class="rounded-xl h-[177px]" />
+        </figure>
+        <div class="card-body items-center text-center font-medium">
+          <h2 id="rhombusTitle" class="card-title font-bold">Rhombus</h2>
+          <p>
+            Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> <span id="rhombusFirstValue">d<sub>1</sub></span>
+            <i class="fa-solid fa-xmark"></i> <span id="rhombusSecondValue">d<sub>2</sub></spa>
+          </p>
+          <div class="grid grid-cols-4 items-center justify-evenly">
+            <input id="rhombusFirstInput" style="width: 65px" type="text" placeholder="d1"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+            <input id="rhombusSecondInput" style="width: 65px" type="text" placeholder="d2"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+          </div>
+          <div class="card-actions mt-6" style="width: 250px">
+            <button id="rhombusButton"
+              class="btn btn-info w-full hover:bg-slate-300 hover:border-none text-white font-bold hover:text-black">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Pentagon card -->
+      <div class="cards w-72 bg-base-100 shadow-xl border border-1 border-solid border-slate-100">
+        <figure class="px-8 pt-10">
+          <img src="./images/pentagon.png" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center font-medium">
+          <h2 id="pentagonTitle" class="card-title font-bold">Pentagon</h2>
+          <p>
+            Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> <span id="pentagonFirstValue">p</span>
+            <i class="fa-solid fa-xmark"></i> <span id="pentagonSecondValue">b</span>
+          </p>
+          <div class="grid grid-cols-4 items-center justify-evenly">
+            <input id="pentagonFirstInput" style="width: 65px" type="text" placeholder="p"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+            <input id="pentagonSecondInput" style="width: 65px" type="text" placeholder="b"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+          </div>
+          <div class="card-actions mt-6" style="width: 250px">
+            <button id="pentagonButton"
+              class="btn btn-info w-full hover:bg-slate-300 hover:border-none text-white font-bold hover:text-black">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Ellipse card -->
+      <div class="cards w-72 bg-base-100 shadow-xl border border-1 border-solid border-slate-100">
+        <figure class="px-8 pt-10">
+          <img src="./images/ellipse.png" alt="Shoes" class="rounded-xl h-[170px]" />
+        </figure>
+        <div class="card-body items-center text-center font-medium">
+          <h2 id="ellipseTitle" class="card-title font-bold">Ellipse</h2>
+          <p>
+            Area (A) = <img class="w-3 inline-block" src="./images/pi.png" alt=""><small class="multiplicationEllipse hidden"><i class="fa-solid fa-xmark"></i></small><span id="ellipseFirstValue">a</span><small class="multiplicationEllipse hidden"><i class="fa-solid fa-xmark"></i></small><span id="ellipseSecondValue">b</span>
+          </p>
+          <div class="grid grid-cols-4 items-center justify-evenly">
+            <input id="ellipseFirstInput" style="width: 65px" type="text" placeholder="a"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+            <input id="ellipseSecondInput" style="width: 65px" type="text" placeholder="b"
+              class="input w-full text-black h-8 bg-slate-100" /><span>cm</span>
+          </div>
+          <div class="card-actions mt-6" style="width: 250px">
+            <button id="ellipseButton"
+              class="btn btn-info w-full hover:bg-slate-300 hover:border-none text-white font-bold hover:text-black">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" lg:w-[31%] w-full calculationArea mt-5">
+      <div class="bg-base-100 shadow-xl border border-1 border-solid border-slate-100 py-3 px-1 min-h-[468px]">
+        <h1 class="text-xl font-bold text-center underline">Area Calculation</h1>
+        <div class="overflow-x-auto">
+          <table class="table w-full">
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- card items part ends -->
+
+  <!-- added js file -->
+  <script src="./js/utilities.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
